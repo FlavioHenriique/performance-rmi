@@ -1,7 +1,6 @@
-package rmi;
+package br.edu.ifpb.server.rmi;
 
-import connection.DAO;
-
+import br.edu.ifpb.shared.IdentityManager;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -10,10 +9,8 @@ public class IdentityManagerImpl extends UnicastRemoteObject implements Identity
     private static final int PORTA_SERVIDOR = 2222;
     private static int id_Atual = 0;
 
-    protected IdentityManagerImpl() throws RemoteException {
+    public IdentityManagerImpl() throws RemoteException {
         super();
-        DAO dao = new DAO();
-        id_Atual = dao.maiorId();
     }
 
     @Override

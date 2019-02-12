@@ -1,7 +1,7 @@
 package rmi;
 
+import br.edu.ifpb.shared.IdentityManager;
 import java.rmi.AccessException;
-import java.rmi.AlreadyBoundException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
