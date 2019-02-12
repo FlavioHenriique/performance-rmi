@@ -34,4 +34,8 @@ public class DAO {
             em.clear();
         }
     }
+
+    public  int maiorId(){
+        return (Integer) em.createQuery("SELECT max(e.id) from Entidade e ").getSingleResult();
+    }
 }
